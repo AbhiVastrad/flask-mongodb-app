@@ -23,7 +23,7 @@ Step 2: Build and Push Docker Image
 $ docker build -t flask-mongodb-app:latest .
 $ docker push -t flask-mongodb-app:latest .
 
-Step 3: Start Minikube cluster:
+Step 3: Start Minikube cluster
 
 $ minikube start
 
