@@ -16,11 +16,13 @@ Before you start, ensure you have the following installed on your local machine:
 Step 1: Clone the Repository 
 
 $ git clone https://github.com/AbhiVastrad/flask-mongodb-app.git
+
 $ cd flask-mongodb-app
 
 Step 2: Build and Push Docker Image
 
 $ docker build -t flask-mongodb-app:latest .
+
 $ docker push -t flask-mongodb-app:latest .
 
 Step 3: Start Minikube cluster
@@ -28,11 +30,15 @@ Step 3: Start Minikube cluster
 $ minikube start
 
 Step 4: Deploy MongoDB
+
+Navigate to the kubernetes directory
+
 Create a Persistent Volume and Persistent Volume Claim:
 
 Apply the mongodb-pv.yaml and mongodb-pvc.yaml:
 
 $ kubectl apply -f mongodb-pv.yaml
+
 $ kubectl apply -f mongodb-pvc.yaml
 
 Deploy MongoDB using a StatefulSet:
