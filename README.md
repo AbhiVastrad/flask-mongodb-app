@@ -55,13 +55,26 @@ Expose the Flask application using a NodePort service:
 $ kubectl apply -f flask-service.yaml
 
 Step 6: Access the Flask Application
-Get the Minikube IP address:
 
-$ minikube ip
+Minikube Service Tunnel:
+
+$ minikube tunnel
+
+This command will run in the foreground and requires administrative privileges. It creates a network route to expose services with type LoadBalancer and should allow you to access the service externally.
 
 Access the application:
 
-Navigate to http://<minikube-ip>:<node-port> in web browser. Replace <minikube-ip> with the IP address from the previous step, and <node-port> with the port number assigned to your service (usually 32181).
+  Open new terminal and navigate to project root directory 
+  
+  1.Forward port 5000 on localhost to the Flask service:
+
+  $ kubectl port-forward service/flask-service 5000:80
+
+  2.Access the application by navigating to:
+
+  http://localhost:5000
+
+  Using the URL you can access the flask application
 
 Step 7: Testing Autoscaling
 
