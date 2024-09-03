@@ -69,11 +69,11 @@ Access the application:
   
   1. Forward port 5000 on localhost to the Flask service:
 
-       $ kubectl port-forward service/flask-service 5000:80
+         $ kubectl port-forward service/flask-service 5000:80
 
   2. Access the application by navigating to:
 
-     http://localhost:5000
+         http://localhost:5000
 
      Using the URL you can access the flask application
 
@@ -81,6 +81,8 @@ Step 7: Testing Autoscaling
 
 Deploy Horizontal Pod Autoscaler (HPA):
 
-        $ kubectl apply -f hpa.yaml
+      $ kubectl apply -f hpa.yaml
+
+
 
 ###This `README.md` file is structured to guide users step-by-step through the deployment process###
