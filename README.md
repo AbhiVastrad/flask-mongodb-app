@@ -56,7 +56,7 @@ $ kubectl apply -f flask-service.yaml
 
 Step 6: Access the Flask Application
 
-Minikube Service Tunnel:
+Minikube Service Tunnel(optional):
 
 $ minikube tunnel
 
