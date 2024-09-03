@@ -33,19 +33,12 @@ Step 4: Deploy MongoDB
 
 Navigate to the kubernetes directory
 
-Create a Persistent Volume and Persistent Volume Claim:
-
-Apply the mongodb-pv.yaml and mongodb-pvc.yaml:
-
-$ kubectl apply -f mongodb-pv.yaml
-
-$ kubectl apply -f mongodb-pvc.yaml
-
 Deploy MongoDB using a StatefulSet:
 
 $ kubectl apply -f mongodb-statefulset.yaml
 
 Step 5: Deploy Flask Application
+
 Deploy the Flask application:
 
 $ kubectl apply -f flask-deployment.yaml
@@ -53,6 +46,14 @@ $ kubectl apply -f flask-deployment.yaml
 Expose the Flask application using a NodePort service:
 
 $ kubectl apply -f flask-service.yaml
+
+Create a Persistent Volume and Persistent Volume Claim:
+
+Apply the mongodb-pv.yaml and mongodb-pvc.yaml:
+
+$ kubectl apply -f mongodb-pv.yaml
+
+$ kubectl apply -f mongodb-pvc.yaml
 
 Step 6: Access the Flask Application
 
