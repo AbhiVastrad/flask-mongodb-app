@@ -51,9 +51,9 @@ Create a Persistent Volume and Persistent Volume Claim:
 
 Apply the mongodb-pv.yaml and mongodb-pvc.yaml:
 
-$ kubectl apply -f mongodb-pv.yaml
+$ kubectl apply -f mongo-pv.yaml
 
-$ kubectl apply -f mongodb-pvc.yaml
+$ kubectl apply -f mongo-pvc.yaml
 
 Step 6: Access the Flask Application
 
