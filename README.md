@@ -67,11 +67,11 @@ Access the application:
 
   Open new terminal and navigate to project root directory 
   
-  1.Forward port 5000 on localhost to the Flask service:
+  1. Forward port 5000 on localhost to the Flask service:
 
   $ kubectl port-forward service/flask-service 5000:80
 
-  2.Access the application by navigating to:
+  2. Access the application by navigating to:
 
   http://localhost:5000
 
