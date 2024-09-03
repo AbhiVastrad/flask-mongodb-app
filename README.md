@@ -15,19 +15,19 @@ Before you start, ensure you have the following installed on your local machine:
 
 Step 1: Clone the Repository 
 
-$ git clone https://github.com/AbhiVastrad/flask-mongodb-app.git
+  $ git clone https://github.com/AbhiVastrad/flask-mongodb-app.git
 
-$ cd flask-mongodb-app
+  $ cd flask-mongodb-app
 
 Step 2: Build and Push Docker Image
 
-$ docker build -t flask-mongodb-app:latest .
+  $ docker build -t flask-mongodb-app:latest .
 
-$ docker push -t flask-mongodb-app:latest .
+  $ docker push -t flask-mongodb-app:latest .
 
 Step 3: Start Minikube cluster
 
-$ minikube start
+  $ minikube start
 
 Step 4: Deploy MongoDB
 
@@ -35,31 +35,31 @@ Navigate to the kubernetes directory
 
 Deploy MongoDB using a StatefulSet:
 
-$ kubectl apply -f mongodb-statefulset.yaml
+  $ kubectl apply -f mongodb-statefulset.yaml
 
 Step 5: Deploy Flask Application
 
 Deploy the Flask application:
 
-$ kubectl apply -f flask-deployment.yaml
+  $ kubectl apply -f flask-deployment.yaml
 
 Expose the Flask application using a NodePort service:
 
-$ kubectl apply -f flask-service.yaml
+  $ kubectl apply -f flask-service.yaml
 
 Create a Persistent Volume and Persistent Volume Claim:
 
 Apply the mongodb-pv.yaml and mongodb-pvc.yaml:
 
-$ kubectl apply -f mongo-pv.yaml
+  $ kubectl apply -f mongo-pv.yaml
 
-$ kubectl apply -f mongo-pvc.yaml
+  $ kubectl apply -f mongo-pvc.yaml
 
 Step 6: Access the Flask Application
 
 Minikube Service Tunnel(optional):
 
-$ minikube tunnel
+  $ minikube tunnel
 
 This command will run in the foreground and requires administrative privileges. It creates a network route to expose services with type LoadBalancer and should allow you to access the service externally.
 
@@ -73,14 +73,14 @@ Access the application:
 
   2. Access the application by navigating to:
 
-    http://localhost:5000
+     http://localhost:5000
 
-    Using the URL you can access the flask application
+     Using the URL you can access the flask application
 
 Step 7: Testing Autoscaling
 
 Deploy Horizontal Pod Autoscaler (HPA):
 
-$ kubectl apply -f hpa.yaml
+    $ kubectl apply -f hpa.yaml
 
 ###This `README.md` file is structured to guide users step-by-step through the deployment process###
