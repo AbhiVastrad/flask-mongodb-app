@@ -39,17 +39,17 @@ Deploy MongoDB using a StatefulSet:
 
 Step 5: Deploy Flask Application
 
-Deploy the Flask application:
+ Execute below commands to deploy flask application:
 
       $ kubectl apply -f flask-deployment.yaml
 
-Expose the Flask application using a NodePort service:
+Step 6: Expose the Flask application using a NodePort service:
 
       $ kubectl apply -f flask-service.yaml
 
-Create a Persistent Volume and Persistent Volume Claim:
+Step 7: Create a Persistent Volume and Persistent Volume Claim:
 
-Apply the mongodb-pv.yaml and mongodb-pvc.yaml:
+   Apply the mongodb-pv.yaml and mongodb-pvc.yaml:
 
       $ kubectl apply -f mongo-pv.yaml
 
